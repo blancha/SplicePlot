@@ -107,12 +107,12 @@ if __name__ == '__main__':
         # extract data from pickle file
         if args.input_type == 'pickle':
             pickle_file = open(args.file,'rb')
-            varpos = pickle.load(pickle_file)
-            junc_name = pickle.load(pickle_file)
-            genotype_averages_dict = pickle.load(pickle_file)
-            mRNA_info_object = pickle.load(pickle_file)
-            data_frame = pickle.load(pickle_file)
-            ordered_genotypes_list = pickle.load(pickle_file)
+            varpos = pickle.read_pickle(pickle_file)
+            junc_name = pickle.read_pickle(pickle_file)
+            genotype_averages_dict = pickle.read_pickle(pickle_file)
+            mRNA_info_object = pickle.read_pickle(pickle_file)
+            data_frame = pickle.read_pickle(pickle_file)
+            ordered_genotypes_list = pickle.read_pickle(pickle_file)
 
             pickle_file.close()
 
